@@ -23,7 +23,7 @@ values = [10, 20, 30]
 result = dict(zip(keys, values))
 print(result)
 
-# Exercise 2: Cinemax n° 2
+# Exercise 2: Cinemax nï¿½ 2
 # Principaux sujets en Python :
 #
 # Parcourir les dictionnaires
@@ -32,25 +32,25 @@ print(result)
 #
 # Instructions
 #
-# Écrivez un programme qui calcule le coût total des billets de cinéma pour une famille en fonction de l'âge de ses membres.
+# ï¿½crivez un programme qui calcule le coï¿½t total des billets de cinï¿½ma pour une famille en fonction de l'ï¿½ge de ses membres.
 #
-# L'âge des membres de la famille est stocké dans un dictionnaire.
-# Les règles de tarification des billets sont les suivantes :
+# L'ï¿½ge des membres de la famille est stockï¿½ dans un dictionnaire.
+# Les rï¿½gles de tarification des billets sont les suivantes :
 # Moins de 3 ans : gratuit
-# De 3 à 12 ans : 10 $
+# De 3 ï¿½ 12 ans : 10 $
 # Plus de 12 ans : 15 $
 #
-# Données familiales :
+# Donnï¿½es familiales :
 #
 # family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 #
-# Parcourez le dictionnaire family pour calculer le coût total.
+# Parcourez le dictionnaire family pour calculer le coï¿½t total.
 # Imprimez le prix du billet pour chaque membre de la famille.
-# Imprimez le coût total à la fin.
+# Imprimez le coï¿½t total ï¿½ la fin.
 #
 # Prime:
 #
-# Permettez à l'utilisateur de saisir les noms et âges des membres de sa famille, puis calculez le coût total du billet.
+# Permettez ï¿½ l'utilisateur de saisir les noms et ï¿½ges des membres de sa famille, puis calculez le coï¿½t total du billet.
 
 family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 
@@ -66,18 +66,18 @@ for name, age in family.items():
     total_cost += ticket_price
     print(f"{name.title()} a {age} ans, prix du billet : {ticket_price} $")
 
-print(f"Coût total des billets : {total_cost} $")
+print(f"Coï¿½t total des billets : {total_cost} $")
 
 # Exercise 3: Zara
 # Principaux sujets en Python :
 #
-# Création de dictionnaires
-# Accéder aux éléments du dictionnaire et les modifier
-# Les méthodes de dictionnaire comme .pop() et .update()
+# Crï¿½ation de dictionnaires
+# Accï¿½der aux ï¿½lï¿½ments du dictionnaire et les modifier
+# Les mï¿½thodes de dictionnaire comme .pop() et .update()
 #
 # Instructions
 #
-# Créer et manipuler un dictionnaire contenant des informations sur la marque Zara.
+# Crï¿½er et manipuler un dictionnaire contenant des informations sur la marque Zara.
 #
 # Informations sur la marque :
 #
@@ -92,21 +92,21 @@ print(f"Coût total des billets : {total_cost} $")
 #     Spain: red,
 #     US: pink, green
 #
-# Créez un dictionnaire contenant les données fournies.
-# Modifiez et accédez au dictionnaire comme suit :
-# Modifiez la valeur de number_stores à 2.
-# Imprimez une phrase décrivant les clients de Zara en utilisant la légende type_of_clothes.
-# Ajoutez une nouvelle clé country_creation avec la valeur Spain.
-# Vérifiez si international_competitors existe et, si oui, ajoutez « Desigual » à la liste.
-# Supprimez la clé creation_date.
-# Imprimez le dernier élément dans international_competitors.
-# Imprimez les principales couleurs aux États-Unis.
-# Affichez le nombre de clés dans le dictionnaire.
-# Imprimez toutes les clés du dictionnaire.
+# Crï¿½ez un dictionnaire contenant les donnï¿½es fournies.
+# Modifiez et accï¿½dez au dictionnaire comme suit :
+# Modifiez la valeur de number_stores ï¿½ 2.
+# Imprimez une phrase dï¿½crivant les clients de Zara en utilisant la lï¿½gende type_of_clothes.
+# Ajoutez une nouvelle clï¿½ country_creation avec la valeur Spain.
+# Vï¿½rifiez si international_competitors existe et, si oui, ajoutez ï¿½ Desigual ï¿½ ï¿½ la liste.
+# Supprimez la clï¿½ creation_date.
+# Imprimez le dernier ï¿½lï¿½ment dans international_competitors.
+# Imprimez les principales couleurs aux ï¿½tats-Unis.
+# Affichez le nombre de clï¿½s dans le dictionnaire.
+# Imprimez toutes les clï¿½s du dictionnaire.
 #
 # Prime:
 #
-# Créez un autre dictionnaire appelé more_on_zara avec creation_date et number_stores. Fusionnez ce dictionnaire avec le dictionnaire original brand et affichez le résultat.
+# Crï¿½ez un autre dictionnaire appelï¿½ more_on_zara avec creation_date et number_stores. Fusionnez ce dictionnaire avec le dictionnaire original brand et affichez le rï¿½sultat.
 
 brand = {
     'name': 'Zara',
@@ -123,7 +123,7 @@ brand = {
 }
 
 brand['number_stores'] = 2
-print(f"Zara vend des vêtements pour {', '.join(brand['type_of_clothes'])}.")
+print(f"Zara vend des vï¿½tements pour {', '.join(brand['type_of_clothes'])}.")
 brand['country_creation'] = 'Spain'
 
 if 'international_competitors' in brand:
@@ -131,13 +131,51 @@ if 'international_competitors' in brand:
 
 brand.pop('creation_date', None)
 print(f"Dernier concurrent international : {brand['international_competitors'][-1]}")
-print(f"Couleurs principales aux États-Unis : {', '.join(brand['major_color']['US'])}")
-print(f"Nombre de clés dans le dictionnaire : {len(brand)}")
-print(f"Clés du dictionnaire : {list(brand.keys())}")
+print(f"Couleurs principales aux ï¿½tats-Unis : {', '.join(brand['major_color']['US'])}")
+print(f"Nombre de clï¿½s dans le dictionnaire : {len(brand)}")
+print(f"Clï¿½s du dictionnaire : {list(brand.keys())}")
 
 more_on_zara = {
     'creation_date': 1975,
     'number_stores': 10000
 }
 brand.update(more_on_zara)
-print('Dictionnaire Zara après fusion :', brand)
+print('Dictionnaire Zara aprï¿½s fusion :', brand)
+
+# Exercise 4: Un peu de gï¿½ographie
+# Objectif : Crï¿½er une fonction qui dï¿½crit une ville et son pays.
+#
+# Principaux sujets en Python :
+#
+# Fonctions ï¿½ plusieurs paramï¿½tres
+# valeurs des paramï¿½tres par dï¿½faut
+# formatage de chaï¿½nes
+#
+# ï¿½tape 1 : Dï¿½finir une fonction avec des paramï¿½tres
+#
+# Dï¿½finissez une fonction nommï¿½e describe_city().
+# Cette fonction doit accepter deux paramï¿½tres : city et country.
+# Attribuez au paramï¿½tre country une valeur par dï¿½faut, telle que "Inconnu".
+#
+# ï¿½tape 2 : Imprimer un message
+#
+# ï¿½ l'intï¿½rieur de la fonction, configurez le code pour afficher une phrase comme "<city> is in <country>".
+# Remplacez <city> et <country> par les valeurs des paramï¿½tres.
+#
+# ï¿½tape 3 : Appeler la fonction
+#
+# Appelez la describe_city() fonction avec diffï¿½rentes combinaisons de ville et de pays.
+# Essayez de l'appeler avec et sans fournir l'argument pays pour voir la valeur par dï¿½faut en action.
+# Exemple : describe_city("Reykjavik", "Iceland") et describe_city("Paris").
+#
+# Rï¿½sultat attendu :
+#
+# Reykjavik is in Iceland.
+# Paris is in Unknown.
+
+def describe_city(city, country='Unknown'):
+    print(f"{city} is in {country}.")
+
+# Appels de test
+describe_city('Reykjavik', 'Iceland')
+describe_city('Abidjan')
