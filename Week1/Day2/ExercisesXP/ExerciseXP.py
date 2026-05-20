@@ -224,3 +224,51 @@ def compare_with_random(user_number):
 
 # Exemple d'appel
 compare_with_random(50)
+
+# Exercise 6: Créons des t-shirts personnalisés !
+# Objectif : Créer une fonction permettant de décrire la taille et le message d'un t-shirt, avec des valeurs par défaut.
+#
+# Principaux sujets en Python :
+#
+# Fonctions avec paramètres et valeurs par défaut
+# Arguments clés
+#
+# Étape 1 : Définir une fonction avec des paramètres
+#
+# Définissez une fonction appelée make_shirt().
+# Cette fonction doit accepter deux paramètres : size et text.
+#
+# Étape 2 : Imprimer un message récapitulatif
+#
+# Configurez la fonction pour afficher une phrase résumant la taille et le message du t-shirt.
+#
+# Étape 3 : Appeler la fonction
+#
+# Étape 4 : Modifier la fonction avec les valeurs par défaut
+#
+# Modifiez la make_shirt() fonction afin qu'elle size ait une valeur par défaut de « large » et text qu'elle ait une valeur par défaut de « J'adore Python ».
+#
+# Étape 5 : Appeler la fonction avec les valeurs par défaut et les valeurs personnalisées
+#
+# Commandez make_shirt() un grand t-shirt avec le message par défaut.
+# Commandez make_shirt() un t-shirt de taille moyenne avec le message par défaut.
+# Appelez make_shirt() pour commander un t-shirt de n'importe quelle taille avec un message différent.
+#
+# Étape 6 (Bonus) : Arguments par mots-clés
+#
+# Appelez make_shirt() en utilisant des arguments nommés (par exemple, make_shirt(size="small", text="Hello!"))).
+#
+# Résultat attendu :
+#
+# The size of the shirt is large and the text is I love Python.
+# The size of the shirt is medium and the text is I love Python.
+# The size of the shirt is small and the text is Custom message.
+
+def make_shirt(size='large', text="I love Python"):
+    print(f"The size of the shirt is {size} and the text is {text}.")
+
+# Appels de test
+make_shirt()
+make_shirt('medium')
+make_shirt('small', 'Custom message')
+make_shirt(size='small', text='Hello!')
