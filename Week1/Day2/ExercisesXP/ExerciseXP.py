@@ -17,6 +17,8 @@
 #
 # {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 
+import random
+
 keys = ['Ten', 'Twenty', 'Thirty']
 values = [10, 20, 30]
 
@@ -179,3 +181,46 @@ def describe_city(city, country='Unknown'):
 # Appels de test
 describe_city('Reykjavik', 'Iceland')
 describe_city('Abidjan')
+# Exercise 5: Al�atoire
+# Objectif : Cr�er une fonction qui g�n�re des nombres al�atoires et les compare.
+#
+# Principaux sujets en Python :
+#
+# random module
+# random.randint() fonction
+# Instructions conditionnelles (if, else)
+#
+# �tape 1 : Importer le random module
+#
+# Au d�but de votre script, utilisez cette fonction import random pour acc�der aux fonctions de g�n�ration de nombres al�atoires.
+#
+# �tape 2 : D�finir une fonction avec un param�tre
+#
+# Cr�ez une fonction qui accepte un nombre compris entre 1 et 100 comme param�tre.
+#
+# �tape 3 : G�n�rer un nombre al�atoire
+#
+# � l'int�rieur de la fonction, utilisez random.randint(1, 100) pour g�n�rer un entier al�atoire compris entre 1 et 100.
+#
+# �tape 4 : Comparer les nombres
+#
+# S'ils sont identiques, afficher un message de r�ussite. Sinon, afficher un message d'�chec et les deux nombres.
+#
+# �tape 5 : Appeler la fonction
+#
+# Appelez la fonction avec un nombre compris entre 1 et 100.
+#
+# R�sultat attendu :
+#
+# Success! (if the numbers match)
+# Fail! Your number: 50, Random number: 23 (if they don't match)
+
+def compare_with_random(user_number):
+    random_number = random.randint(1, 100)
+    if user_number == random_number:
+        print('Success!')
+    else:
+        print(f'Fail! Your number: {user_number}, Random number: {random_number}')
+
+# Exemple d'appel
+compare_with_random(50)
