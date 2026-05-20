@@ -4,7 +4,7 @@
 # - Vérifiez si l'utilisateur porte le même nom que vous.
 # - Affichez un message humoristique selon le résultat.
 
-my_name = "Alice"
+my_name = "Bah"
 user_name = input("Quel est votre nom ? ").strip()
 
 if user_name.lower() == my_name.lower():
