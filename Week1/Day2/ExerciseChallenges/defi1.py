@@ -48,8 +48,8 @@ basket = []
 for item, price in items_purchase.items():
 
     # Nettoyage du prix
-    clean_price = price.replace("$", "")
-    clean_price = clean_price.replace(",", "")
+    clean_price = price.replace("$", "") 
+    clean_price = clean_price.replace(",", "") 
 
     clean_price = int(clean_price)
 
