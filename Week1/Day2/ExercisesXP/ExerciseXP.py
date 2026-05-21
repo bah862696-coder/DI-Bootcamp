@@ -354,12 +354,12 @@ main()
 #
 # Boucles
 # Listes
-# formatage de chaînes
+# formatage de chaï¿½nes
 #
 # Instructions:
 #
-# Écrivez une boucle qui demande à l'utilisateur de saisir les ingrédients de la pizza un par un.
-# Arrêtez la boucle lorsque l'utilisateur saisit 'quit'.
+# ï¿½crivez une boucle qui demande ï¿½ l'utilisateur de saisir les ingrï¿½dients de la pizza un par un.
+# Arrï¿½tez la boucle lorsque l'utilisateur saisit 'quit'.
 # Pour chaque garniture saisie, imprimez : "I will add <topping> to your pizza."
 
 pizza_toppings = []
