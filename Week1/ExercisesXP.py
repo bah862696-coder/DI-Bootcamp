@@ -55,19 +55,14 @@ print(f"The oldest cat is {oldest.name} and is {oldest.age} years old.")
 # Step 1 : Create the Dog class
 # ==================================================
 class Dog:
-
     # Constructor
     def __init__(self, name, height):
-
         # Attributes
         self.name = name
         self.height = height
-
     # Bark method
     def bark(self):
-
         print(f"{self.name} goes woof!")
-
     # Jump method
     def jump(self):
 
@@ -91,13 +86,48 @@ sarahs_dog.jump()
 # Step 4 : Compare dog sizes
 # ==================================================
 if davids_dog.height > sarahs_dog.height:
-
     print(f"{davids_dog.name} is taller than {sarahs_dog.name}.")
-
 elif sarahs_dog.height > davids_dog.height:
-
     print(f"{sarahs_dog.name} is taller than {davids_dog.name}.")
-
 else:
-
     print("Both dogs are the same height.")
+    #
+    #
+    ## ==================================================
+# Exercise 3 : Who’s the Song Producer?
+# ==================================================
+# Instructions:
+# Create a Song class.
+# The class should:
+# - receive lyrics as a list
+# - print the song lyrics line by line
+# ==================================================
+# Step 1 : Create the Song class
+# ==================================================
+class Song:
+
+    # Constructor
+    def __init__(self, lyrics):
+
+        # Attribute
+        self.lyrics = lyrics
+
+    # Method to print lyrics
+    def sing_me_a_song(self):
+
+        for line in self.lyrics:
+
+            print(line)
+
+# ==================================================
+# Create a Song object
+# ==================================================
+stairway = Song([
+    "There’s a lady who's sure",
+    "all that glitters is gold",
+    "and she’s buying a stairway to heaven"
+])
+# ==================================================
+# Call the method
+# ==================================================
+stairway.sing_me_a_song()
