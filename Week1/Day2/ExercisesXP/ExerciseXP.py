@@ -348,3 +348,27 @@ def main():
 
 # Appel principal
 main()
+
+# Exercise 8: Garnitures de pizza
+# Principaux sujets en Python :
+#
+# Boucles
+# Listes
+# formatage de chaînes
+#
+# Instructions:
+#
+# Écrivez une boucle qui demande à l'utilisateur de saisir les ingrédients de la pizza un par un.
+# Arrêtez la boucle lorsque l'utilisateur saisit 'quit'.
+# Pour chaque garniture saisie, imprimez : "I will add <topping> to your pizza."
+
+pizza_toppings = []
+
+while True:
+    topping = input("Enter a pizza topping (or 'quit' to finish): ")
+    if topping.lower() == 'quit':
+        break
+    pizza_toppings.append(topping)
+    print(f"I will add {topping} to your pizza.")
+
+print("Your pizza toppings:", pizza_toppings)
