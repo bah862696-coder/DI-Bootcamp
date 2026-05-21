@@ -1,0 +1,39 @@
+# Défi 1 : Dictionnaire d’index des lettres
+# Objectif : Créer un dictionnaire qui stocke les indices
+# (numéro de position) de chaque lettre d'un mot fourni par l'utilisateur.
+
+# Principaux sujets en Python :
+# - input()
+# - dictionnaires
+# - boucles for
+# - conditions if / else
+# - manipulation de chaînes
+# - listes
+
+# Instructions :
+# 1. Demander à l'utilisateur de saisir un mot.
+# 2. Parcourir chaque caractère du mot.
+# 3. Vérifier si la lettre existe déjà dans le dictionnaire :
+#    - Si oui, ajouter l’index dans la liste.
+#    - Sinon, créer une nouvelle clé avec une liste contenant l’index.
+# 4. Afficher le dictionnaire final.
+
+# Demande du mot à l'utilisateur
+mot = input("Entrez un mot : ")
+
+# Création du dictionnaire vide
+index_lettres = {}
+
+# Parcours du mot avec les indices
+for index, lettre in enumerate(mot):
+
+    # Vérifie si la lettre existe déjà dans le dictionnaire
+    if lettre in index_lettres:
+        index_lettres[lettre].append(index)
+
+    # Sinon on crée une nouvelle entrée
+    else:
+        index_lettres[lettre] = [index]
+
+# Affichage du résultat
+print(index_lettres)
