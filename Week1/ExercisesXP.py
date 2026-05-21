@@ -131,3 +131,116 @@ stairway = Song([
 # Call the method
 # ==================================================
 stairway.sing_me_a_song()
+#
+#
+## ==================================================
+# Exercise 4 : Afternoon at the Zoo
+# ==================================================
+
+# Instructions:
+# Create a Zoo class that can:
+# - add animals
+# - display animals
+# - sell animals
+# - sort animals alphabetically
+# - group animals by first letter
+
+
+# ==================================================
+# Step 1 : Create the Zoo class
+# ==================================================
+
+class Zoo:
+
+    # Constructor
+    def __init__(self, zoo_name):
+
+        # Attributes
+        self.zoo_name = zoo_name
+        self.animals = []
+        self.grouped_animals = {}
+        
+    # Add animal method
+    def add_animal(self, *new_animals):
+
+        for animal in new_animals:
+
+            # Avoid duplicates
+            if animal not in self.animals:
+
+                self.animals.append(animal)
+
+    # Display animals
+    def get_animals(self):
+
+        print(f"\nAnimals in {self.zoo_name}:")
+
+        for animal in self.animals:
+
+            print(animal)
+
+    # Sell animal
+    def sell_animal(self, animal_sold):
+
+        if animal_sold in self.animals:
+
+            self.animals.remove(animal_sold)
+
+            print(f"\n{animal_sold} has been sold.")
+
+        else:
+
+            print(f"\n{animal_sold} is not in the zoo.")
+
+    # Sort and group animals
+    def sort_animals(self):
+
+        # Sort animals alphabetically
+        sorted_animals = sorted(self.animals)
+
+        grouped = {}
+
+        # Group by first letter
+        for animal in sorted_animals:
+
+            first_letter = animal[0]
+
+            if first_letter not in grouped:
+
+                grouped[first_letter] = []
+
+            grouped[first_letter].append(animal)
+
+        self.grouped_animals = grouped
+
+    # Display groups
+    def get_groups(self):
+
+        print("\nGrouped Animals:")
+
+        for letter, animals in self.grouped_animals.items():
+
+            print(f"{letter}: {animals}")
+
+# ==================================================
+# Step 2 : Create a Zoo object
+# ==================================================
+brooklyn_safari = Zoo("Brooklyn Safari")
+
+# ==================================================
+# Step 3 : Use Zoo methods
+# ==================================================
+brooklyn_safari.add_animal(
+    "Giraffe",
+    "Bear",
+    "Baboon",
+    "Lion",
+    "Zebra",
+    "Cat",
+    "Cougar"
+)
+brooklyn_safari.get_animals()
+brooklyn_safari.sell_animal("Bear")
+brooklyn_safari.get_animals()
+brooklyn_safari.sort_animals()
+brooklyn_safari.get_groups()
