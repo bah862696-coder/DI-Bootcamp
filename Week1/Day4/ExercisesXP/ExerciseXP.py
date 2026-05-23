@@ -129,3 +129,65 @@ dog1.train()
 dog1.play(dog2, dog3)
 # Dog does a trick
 dog1.do_a_trick()
+#
+# Exercise 4 : Family and Person
+# Step 1 : Create the Person class
+class Person:
+    # Constructor
+    def __init__(self, first_name, age):
+        self.first_name = first_name
+        self.age = age
+        self.last_name = ""
+    # Method to check if person is 18 or older
+    def is_18(self):
+        return self.age >= 18
+# Step 2 : Create the Family class
+class Family:
+    # Constructor
+    def __init__(self, last_name):
+        self.last_name = last_name
+        self.members = []
+    # Add a new family member
+    def born(self, first_name, age):
+        # Create Person object
+        person = Person(first_name, age)
+        # Give family name
+        person.last_name = self.last_name
+        # Add to members list
+        self.members.append(person)
+    # Check if member is allowed to go out
+    def check_majority(self, first_name):
+        # Search for the person
+        for member in self.members:
+            if member.first_name == first_name:
+                # Check age
+                if member.is_18():
+                    print(
+                        f"You are over 18, your parents Jane and John accept that you will go out with your friends"
+                    )
+                else:
+                    print(
+                        "Sorry, you are not allowed to go out with your friends."
+                    )
+                return
+        # If person not found
+        print("Person not found.")
+    # Display family information
+    def family_presentation(self):
+        print(f"\nThe {self.last_name} family:\n")
+        for member in self.members:
+            print(
+                f"Name: {member.first_name} {member.last_name} | Age: {member.age}"
+            )
+# Create family
+my_family = Family("Smith")
+# Add family members
+my_family.born("John", 45)
+my_family.born("Jane", 42)
+my_family.born("Emma", 20)
+my_family.born("Tom", 15)
+# Check majority
+my_family.check_majority("Emma")
+my_family.check_majority("Tom")
+# Display family information
+my_family.family_presentation()
