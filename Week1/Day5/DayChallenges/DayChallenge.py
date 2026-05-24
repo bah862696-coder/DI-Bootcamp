@@ -28,3 +28,29 @@ class Circle:
         return self.radius == other.radius
     def __lt__(self, other):
         return self.radius < other.radius
+        #
+        #
+        ## Création des cercles
+c1 = Circle(radius=5)
+c2 = Circle(diameter=8)
+c3 = Circle(radius=2)
+
+# Affichage
+print(c1)
+print(c2)
+print(c3)
+# Aire
+print("\nAire du cercle 1 :", c1.area)
+# Addition
+c4 = c1 + c2
+print("\nNouveau cercle après addition :")
+print(c4)
+# Comparaison
+print("\nC1 > C2 :", c1 > c2)
+print("C1 == C2 :", c1 == c2)
+# Tri des cercles
+circles = [c1, c2, c3, c4]
+circles.sort()
+print("\nCercles triés :")
+for circle in circles:
+    print(circle)
